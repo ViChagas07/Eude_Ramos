@@ -325,7 +325,7 @@ small,
 }
 
 .hero-eyebrow-name {
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--green-primary);
   text-transform: uppercase;
@@ -333,7 +333,7 @@ small,
 }
 
 .hero-eyebrow-sub {
-  font-size: 8px;
+  font-size: 10px;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -430,7 +430,7 @@ small,
 }
 
 .hero-meta-label {
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.3px;
@@ -449,7 +449,7 @@ small,
 }
 
 .hero-meta-value {
-  font-size: 11px;
+  font-size: 13px;
   color: var(--text-secondary);
 }
 
@@ -1218,6 +1218,10 @@ small,
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .contato-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .comp-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1361,11 +1365,11 @@ small,
   }
 
   .hero-eyebrow-name {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .hero-eyebrow-sub {
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .hero-card-avatar {
@@ -1379,11 +1383,11 @@ small,
   }
 
   .hero-meta-label {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .hero-meta-value {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   /* Section padding */
@@ -1443,7 +1447,7 @@ small,
   }
 
   .contato-cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
   }
 

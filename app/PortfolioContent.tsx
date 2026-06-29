@@ -143,6 +143,31 @@ function IconWhatsApp() {
   );
 }
 
+function IconInstagram() {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      {/* Fundo gradiente estilo Instagram */}
+      <defs>
+        <linearGradient id="insta-grad" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stopColor="#F58529" />
+          <stop offset="25%" stopColor="#DD2A7B" />
+          <stop offset="50%" stopColor="#8134AF" />
+          <stop offset="100%" stopColor="#515BD4" />
+        </linearGradient>
+      </defs>
+      <rect x="1" y="1" width="22" height="22" rx="6" fill="url(#insta-grad)" />
+      <rect x="7" y="7" width="10" height="10" rx="4" fill="none" stroke="#fff" strokeWidth="1.8" />
+      <circle cx="17.5" cy="6.5" r="1" fill="#fff" />
+      <circle cx="12" cy="12" r="3" fill="none" stroke="#fff" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
 function IconLocation() {
   return (
     <svg
@@ -1072,6 +1097,21 @@ export default function PortfolioContent() {
                 <span className="contato-card-value" style={{ display: 'block', textAlign: 'center' }}>
                   Salvador – BA
                 </span>
+              </div>
+
+              <div className="contato-card">
+                <a
+                  href="https://www.instagram.com/eudiis10/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Perfil do Instagram"
+                >
+                  <span className="contato-card-icon">
+                    <IconInstagram />
+                  </span>
+                  <span className="contato-card-label">Instagram</span>
+                  <span className="contato-card-value">@eudiis10</span>
+                </a>
               </div>
             </div>
           </div>
