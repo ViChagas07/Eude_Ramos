@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     'benefícios sociais',
     'pareceres sociais',
   ],
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'Eude Ramos Silva · Assistente Social',
     description:
@@ -36,6 +40,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
