@@ -1,0 +1,16 @@
+# Next.js
+Portfolio/node_modules/
+Portfolio/.next/
+Portfolio/out/
+
+# Caso existam na raiz
+node_modules/
+.next/
+out/
+
+# Ambiente
+.env
+.env.local
+
+# VS Code
+.vscode/
