@@ -1,16 +1,24 @@
-# Next.js
-Portfolio/node_modules/
-Portfolio/.next/
-Portfolio/out/
-
-# Caso existam na raiz
+# Dependências
 node_modules/
+
+# Build Next.js
 .next/
 out/
 
-# Ambiente
+# Variáveis de ambiente
 .env
 .env.local
+.env.*.local
 
-# VS Code
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
 .vscode/
+.idea/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
