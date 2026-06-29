@@ -851,13 +851,13 @@ small,
 }
 
 .comp-pill {
-  background: var(--green-light);
+  background: var(--blue-tag-bg);
   border-radius: 10px;
   padding: 12px 8px;
   text-align: center;
   font-size: 10px;
   font-weight: 600;
-  color: var(--green-primary);
+  color: var(--blue-accent);
   transition: background 0.2s ease, transform 0.2s ease;
   cursor: default;
   opacity: 0;
@@ -865,7 +865,7 @@ small,
 }
 
 .comp-pill:hover {
-  background: var(--green-border);
+  background: #bbdefb;
   transform: translateY(-2px);
 }
 
