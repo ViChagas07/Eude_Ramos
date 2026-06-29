@@ -962,7 +962,8 @@ small,
 .contato-card-label {
   font-size: 10px;
   font-weight: 600;
-  opacity: 0.8;
+  color: var(--white);
+  opacity: 0.85;
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
@@ -970,6 +971,7 @@ small,
 .contato-card-value {
   font-size: 12px;
   font-weight: 500;
+  color: var(--white);
 }
 
 /* ═══════════ SOCIAL CTA (mobile: stacked) ═══════════ */
