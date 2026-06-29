@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // static HTML export — ideal for portfolio hosting on Vercel
-  images: {
-    unoptimized: true, // needed for static export
-  },
+  // Vercel has native Next.js support — no static export needed
 };
 
 export default nextConfig;
