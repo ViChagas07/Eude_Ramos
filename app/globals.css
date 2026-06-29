@@ -974,86 +974,6 @@ small,
   color: var(--white);
 }
 
-/* ═══════════ SOCIAL CTA (mobile: stacked) ═══════════ */
-.social-cta {
-  background: var(--white);
-  text-align: center;
-  padding: 32px 20px;
-  border-top: 1px solid var(--green-light);
-}
-
-.social-cta-title {
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--dark-navy);
-  margin-bottom: 4px;
-}
-
-.social-cta-sub {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-bottom: 20px;
-}
-
-.social-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.social-icon-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  padding: 10px;
-  border-radius: 12px;
-  transition: transform 0.2s ease;
-}
-
-.social-icon-link:hover {
-  transform: scale(1.05);
-}
-
-.social-icon-circle {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--green-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.social-icon-link:hover .social-icon-circle {
-  background: var(--green-primary);
-  transform: scale(1.1);
-}
-
-.social-icon-circle svg {
-  width: 22px;
-  height: 22px;
-  color: var(--green-primary);
-  transition: color 0.2s ease;
-}
-
-.social-icon-link:hover .social-icon-circle svg {
-  color: var(--white);
-}
-
-.social-icon-label {
-  font-size: 10px;
-  font-weight: 600;
-  color: var(--dark-navy);
-}
-
-.social-icon-value {
-  font-size: 11px;
-  color: var(--text-muted);
-}
-
 /* ═══════════ FOOTER (mobile: stacked) ═══════════ */
 .footer {
   background: var(--dark-navy);
@@ -1137,12 +1057,6 @@ small,
   .comp-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-  }
-
-  .social-icons {
-    flex-direction: row;
-    justify-content: center;
-    gap: 16px;
   }
 
   .container {
@@ -1235,9 +1149,6 @@ small,
     padding: 40px 32px;
   }
 
-  .social-cta {
-    padding: 40px 32px;
-  }
 
   .footer {
     flex-direction: row;
@@ -1395,9 +1306,6 @@ small,
     padding: 48px 64px;
   }
 
-  .social-cta {
-    padding: 48px 64px;
-  }
 
   .footer {
     padding: 20px 64px;
@@ -1451,10 +1359,6 @@ small,
     gap: 16px;
   }
 
-  .social-icons {
-    flex-direction: row;
-    gap: 24px;
-  }
 
   /* Restore larger card styles */
   .exp-card {

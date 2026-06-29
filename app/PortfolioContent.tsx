@@ -1082,7 +1082,7 @@ export default function PortfolioContent() {
                   <span className="contato-card-icon">
                     <IconWhatsApp />
                   </span>
-                  <span className="contato-card-label">WhatsApp</span>
+                  <span className="contato-card-label">Telefone/WhatsApp</span>
                   <span className="contato-card-value">(71) 98651-1560</span>
                 </a>
               </div>
@@ -1113,57 +1113,6 @@ export default function PortfolioContent() {
                   <span className="contato-card-value">@eudiis10</span>
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════ SOCIAL CTA — "VAMOS CONVERSAR" ══════════ */}
-      <section className="social-cta fade-section">
-        <div className="container" style={{ padding: 0 }}>
-          <div className="social-cta-title">Vamos Conversar!</div>
-          <p className="social-cta-sub">
-            Disponível para orientações e acompanhamento social
-          </p>
-
-          <div className="social-icons">
-            {/* Email */}
-            <a
-              href="mailto:ramosnota10@hotmail.com"
-              className="social-icon-link"
-              aria-label="Enviar e-mail"
-            >
-              <span className="social-icon-circle">
-                <IconMail />
-              </span>
-              <span className="social-icon-label">E-mail</span>
-              <span className="social-icon-value">
-                ramosnota10@hotmail.com
-              </span>
-            </a>
-
-            {/* WhatsApp */}
-            <a
-              href="https://wa.me/5571986511560"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-icon-link"
-              aria-label="WhatsApp"
-            >
-              <span className="social-icon-circle">
-                <IconWhatsApp />
-              </span>
-              <span className="social-icon-label">WhatsApp</span>
-              <span className="social-icon-value">(71) 98651-1560</span>
-            </a>
-
-            {/* Location */}
-            <div className="social-icon-link">
-              <span className="social-icon-circle">
-                <IconLocation />
-              </span>
-              <span className="social-icon-label">Localização</span>
-              <span className="social-icon-value">Salvador – BA</span>
             </div>
           </div>
         </div>
