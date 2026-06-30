@@ -530,8 +530,13 @@ export default function PortfolioContent() {
           </div>
 
           {/* Hero CTA */}
-          <a href="#contato" className="hero-btn" aria-label="Quero entrar em contato">
-            Quero Entrar em Contato
+          <a
+            href="/curriculo-eude-ramos.pdf"
+            download
+            className="hero-btn"
+            aria-label="Baixar currículo de Eude Ramos"
+          >
+            Baixar Currículo
           </a>
         </div>
 
