@@ -906,24 +906,6 @@ small,
   color: rgba(255, 255, 255, 0.85);
 }
 
-.contato-btn {
-  background: var(--white);
-  color: var(--green-primary);
-  border-radius: 8px;
-  padding: 12px 24px;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.contato-btn:hover {
-  background: var(--green-light);
-  transform: scale(1.02);
-}
-
 .contato-cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -1400,11 +1382,6 @@ small,
 
   .contato-cta-sub {
     font-size: 13px;
-  }
-
-  .contato-btn {
-    font-size: 13px;
-    padding: 12px 24px;
   }
 
   .footer {

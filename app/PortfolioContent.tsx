@@ -1051,16 +1051,6 @@ export default function PortfolioContent() {
                   e encaminhamentos sociais.
                 </p>
               </div>
-
-              <a
-                href="https://wa.me/5571986511560"
-                className="contato-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Entrar em contato pelo WhatsApp"
-              >
-                Entrar em Contato
-              </a>
             </div>
 
             {/* Contact Cards */}
