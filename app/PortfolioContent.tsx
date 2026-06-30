@@ -436,7 +436,7 @@ export default function PortfolioContent() {
       </div>
 
       {/* ══════════ HERO ══════════ */}
-      <header className="hero" id="inicio">
+      <header className="hero fade-section" id="inicio">
         <div className="hero-left">
           {/* Eyebrow */}
           <div className="hero-eyebrow">
