@@ -274,34 +274,12 @@ export default function PortfolioContent() {
   /* ── Navbar shadow on scroll + active link tracking + scroll-to-top ── */
   useEffect(() => {
     const nav = document.querySelector('.navbar');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const sections = document.querySelectorAll('section[id]');
     const scrollTopBtn = document.getElementById('scroll-top-btn');
 
     const onScroll = () => {
       // Navbar shadow
       if (nav) {
         nav.classList.toggle('scrolled', window.scrollY > 10);
-      }
-
-      // Active link — usa getBoundingClientRect (ignora transforms CSS)
-      if (navLinks.length > 0 && sections.length > 0) {
-        const scrollPos = window.scrollY + 120;
-        let current = '';
-        sections.forEach((section) => {
-          const el = section as HTMLElement;
-          const rect = el.getBoundingClientRect();
-          const sectionTop = rect.top + window.scrollY;
-          if (scrollPos >= sectionTop) {
-            current = el.id;
-          }
-        });
-        navLinks.forEach((link) => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-          }
-        });
       }
 
       // Scroll-to-top visibility
@@ -315,8 +293,54 @@ export default function PortfolioContent() {
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // run once on mount
+    onScroll();
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  /* ── Active link tracking via IntersectionObserver ── */
+  useEffect(() => {
+    const sectionIds = ['sobre', 'experiencia', 'areas', 'formacao', 'competencias', 'contato'];
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    if (navLinks.length === 0) return;
+
+    const updateActive = (id: string) => {
+      navLinks.forEach((link) => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${id}`) {
+          link.classList.add('active');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Encontra a seção mais visível no topo
+        let bestTop = Infinity;
+        let bestId = '';
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.boundingClientRect.top < bestTop) {
+            bestTop = entry.boundingClientRect.top;
+            bestId = entry.target.id;
+          }
+        });
+        if (bestId) {
+          updateActive(bestId);
+        }
+      },
+      {
+        rootMargin: '-80px 0px -70% 0px',
+        threshold: 0,
+      }
+    );
+
+    // Observa cada seção
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   /* ── Stagger animation for competence pills (moonwalk-aware) ── */
