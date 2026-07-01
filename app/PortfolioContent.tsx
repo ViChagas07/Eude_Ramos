@@ -284,12 +284,17 @@ export default function PortfolioContent() {
         nav.classList.toggle('scrolled', window.scrollY > 10);
       }
 
-      // Active link
+      // Active link — usa getBoundingClientRect (ignora transforms CSS)
       if (navLinks.length > 0 && sections.length > 0) {
+        const scrollPos = window.scrollY + 120;
         let current = '';
         sections.forEach((section) => {
-          const sectionTop = (section as HTMLElement).offsetTop - 100;
-          if (window.scrollY >= sectionTop) current = section.id;
+          const el = section as HTMLElement;
+          const rect = el.getBoundingClientRect();
+          const sectionTop = rect.top + window.scrollY;
+          if (scrollPos >= sectionTop) {
+            current = el.id;
+          }
         });
         navLinks.forEach((link) => {
           link.classList.remove('active');
