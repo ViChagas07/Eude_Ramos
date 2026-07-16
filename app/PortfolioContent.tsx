@@ -471,6 +471,59 @@ export default function PortfolioContent() {
         </div>
       </header>
 
+      {/* ══════════ SEÇÃO SOBRE MIM ══════════ */}
+      <section id="about" className="sobre-section fade-section">
+        <div className="section-padding">
+          <div className="container" style={{ padding: 0 }}>
+            <h2 className="section-title">Sobre Mim</h2>
+            <div className="sobre-grid" style={{ marginTop: 20 }}>
+              {/* Left: Professional Profile */}
+              <div className="sobre-text">
+                <p>
+                  Assistente Social com experiência em contextos hospitalares e
+                  sociojurídicos, atuando no acolhimento, orientação e
+                  encaminhamento de pacientes, familiares e pessoas privadas de
+                  liberdade. Comprometida com a ética profissional, os direitos
+                  humanos e a garantia do acesso às políticas públicas.
+                  Especialista em Serviço Social na Saúde, com sólida capacidade
+                  de trabalho em equipe multidisciplinar, escuta ativa e
+                  elaboração de relatórios e pareceres sociais.
+                </p>
+              </div>
+
+              {/* Right: Quick Highlights */}
+              <div className="sobre-stats">
+                <div className="sobre-stat-card">
+                  <span className="sobre-stat-emoji">🎓</span>
+                  <span className="sobre-stat-info">
+                    <span className="sobre-stat-label">Bacharel</span>
+                    <span className="sobre-stat-sub">Serviço Social</span>
+                  </span>
+                </div>
+                <div className="sobre-stat-card">
+                  <span className="sobre-stat-emoji">🏥</span>
+                  <span className="sobre-stat-info">
+                    <span className="sobre-stat-label">Especialista</span>
+                    <span className="sobre-stat-sub">
+                      Serviço Social na Saúde
+                    </span>
+                  </span>
+                </div>
+                <div className="sobre-stat-card">
+                  <span className="sobre-stat-emoji">⚖️</span>
+                  <span className="sobre-stat-info">
+                    <span className="sobre-stat-label">Experiência</span>
+                    <span className="sobre-stat-sub">
+                      Hospitalar + Prisional
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ══════════ SEÇÃO ÁREAS DE ATUAÇÃO ══════════ */}
       <section id="areas" className="areas-section fade-section">
         <div className="section-padding">
@@ -541,59 +594,6 @@ export default function PortfolioContent() {
                 <p className="area-card-desc">
                   Elaboração de documentação social para fins legais e médicos
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════ SEÇÃO SOBRE MIM ══════════ */}
-      <section id="about" className="sobre-section fade-section">
-        <div className="section-padding">
-          <div className="container" style={{ padding: 0 }}>
-            <h2 className="section-title">Sobre Mim</h2>
-            <div className="sobre-grid" style={{ marginTop: 20 }}>
-              {/* Left: Professional Profile */}
-              <div className="sobre-text">
-                <p>
-                  Assistente Social com experiência em contextos hospitalares e
-                  sociojurídicos, atuando no acolhimento, orientação e
-                  encaminhamento de pacientes, familiares e pessoas privadas de
-                  liberdade. Comprometida com a ética profissional, os direitos
-                  humanos e a garantia do acesso às políticas públicas.
-                  Especialista em Serviço Social na Saúde, com sólida capacidade
-                  de trabalho em equipe multidisciplinar, escuta ativa e
-                  elaboração de relatórios e pareceres sociais.
-                </p>
-              </div>
-
-              {/* Right: Quick Highlights */}
-              <div className="sobre-stats">
-                <div className="sobre-stat-card">
-                  <span className="sobre-stat-emoji">🎓</span>
-                  <span className="sobre-stat-info">
-                    <span className="sobre-stat-label">Bacharel</span>
-                    <span className="sobre-stat-sub">Serviço Social</span>
-                  </span>
-                </div>
-                <div className="sobre-stat-card">
-                  <span className="sobre-stat-emoji">🏥</span>
-                  <span className="sobre-stat-info">
-                    <span className="sobre-stat-label">Especialista</span>
-                    <span className="sobre-stat-sub">
-                      Serviço Social na Saúde
-                    </span>
-                  </span>
-                </div>
-                <div className="sobre-stat-card">
-                  <span className="sobre-stat-emoji">⚖️</span>
-                  <span className="sobre-stat-info">
-                    <span className="sobre-stat-label">Experiência</span>
-                    <span className="sobre-stat-sub">
-                      Hospitalar + Prisional
-                    </span>
-                  </span>
-                </div>
               </div>
             </div>
           </div>
