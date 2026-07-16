@@ -1031,7 +1031,7 @@ export default function PortfolioContent() {
       {/* ══════════ FOOTER ══════════ */}
       <footer className="footer" role="contentinfo">
         <div className="footer-left">
-          © 2025 Eude Ramos Silva · Assistente Social · CRESS-BA
+          © Eude Ramos Silva · Assistente Social · CRESS-BA
         </div>
         <div className="footer-right">
           <span>ramosnota10@hotmail.com</span>
