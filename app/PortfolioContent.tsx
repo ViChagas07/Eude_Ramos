@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import Navbar from '@/components/Navbar';
 
 /* ═══════════════════════════════════════════════════════════════
    INLINE SVG ICONS
@@ -245,7 +246,6 @@ function IconChevronDown() {
    ═══════════════════════════════════════════════════════════════ */
 
 export default function PortfolioContent() {
-  const [mobileOpen, setMobileOpen] = useState(false);
   const [eventsOpen, setEventsOpen] = useState(false);
   const compSectionRef = useRef<HTMLElement>(null);
 
@@ -297,52 +297,6 @@ export default function PortfolioContent() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  /* ── Active link tracking via IntersectionObserver ── */
-  useEffect(() => {
-    const sectionIds = ['sobre', 'experiencia', 'areas', 'formacao', 'competencias', 'contato'];
-    const navLinks = document.querySelectorAll('.nav-links a');
-
-    if (navLinks.length === 0) return;
-
-    const updateActive = (id: string) => {
-      navLinks.forEach((link) => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${id}`) {
-          link.classList.add('active');
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        // Encontra a seção mais visível no topo
-        let bestTop = Infinity;
-        let bestId = '';
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.boundingClientRect.top < bestTop) {
-            bestTop = entry.boundingClientRect.top;
-            bestId = entry.target.id;
-          }
-        });
-        if (bestId) {
-          updateActive(bestId);
-        }
-      },
-      {
-        rootMargin: '-80px 0px -70% 0px',
-        threshold: 0,
-      }
-    );
-
-    // Observa cada seção
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   /* ── Stagger animation for competence pills (moonwalk-aware) ── */
   useEffect(() => {
     const compSection = compSectionRef.current;
@@ -383,11 +337,6 @@ export default function PortfolioContent() {
     return () => observer.disconnect();
   }, []);
 
-  /* ── Close mobile drawer on link click ── */
-  const handleMobileLinkClick = () => {
-    setMobileOpen(false);
-  };
-
   /* ── Scroll to top ── */
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -399,70 +348,7 @@ export default function PortfolioContent() {
 
   return (
     <>
-      {/* ══════════ NAVBAR ══════════ */}
-      <nav className="navbar" role="navigation" aria-label="Navegação principal">
-        <div className="container">
-          <a href="#" className="nav-logo" aria-label="Eude Ramos Silva — Início">
-            <Image
-              src="/logo-er.png"
-              alt="Logo Eude Ramos"
-              width={32}
-              height={32}
-              className="nav-logo-icon"
-            />
-            <span className="nav-logo-text">Eude Ramos · Assistente Social</span>
-          </a>
-
-          <div className="nav-links">
-            <a href="#sobre">Sobre</a>
-            <a href="#experiencia">Experiência</a>
-            <a href="#areas">Áreas de Atuação</a>
-            <a href="#formacao">Formação</a>
-            <a href="#contato">Contato</a>
-          </div>
-
-          <a href="#contato" className="nav-cta" aria-label="Entrar em contato">
-            Entrar em Contato
-          </a>
-
-          <button
-            className={`hamburger ${mobileOpen ? 'open' : ''}`}
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? 'Fechar menu' : 'Abrir menu'}
-            aria-expanded={mobileOpen}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
-        </div>
-      </nav>
-
-      {/* Mobile Drawer */}
-      <div
-        className={`mobile-drawer ${mobileOpen ? 'open' : ''}`}
-        role="dialog"
-        aria-label="Menu de navegação"
-      >
-        <a href="#sobre" onClick={handleMobileLinkClick}>
-          Sobre
-        </a>
-        <a href="#experiencia" onClick={handleMobileLinkClick}>
-          Experiência
-        </a>
-        <a href="#areas" onClick={handleMobileLinkClick}>
-          Áreas de Atuação
-        </a>
-        <a href="#formacao" onClick={handleMobileLinkClick}>
-          Formação
-        </a>
-        <a href="#competencias" onClick={handleMobileLinkClick}>
-          Competências
-        </a>
-        <a href="#contato" onClick={handleMobileLinkClick}>
-          Contato
-        </a>
-      </div>
+      <Navbar />
 
       {/* ══════════ HERO ══════════ */}
       <header className="hero fade-section" id="inicio">
@@ -662,7 +548,7 @@ export default function PortfolioContent() {
       </section>
 
       {/* ══════════ SEÇÃO SOBRE MIM ══════════ */}
-      <section id="sobre" className="sobre-section fade-section">
+      <section id="about" className="sobre-section fade-section">
         <div className="section-padding">
           <div className="container" style={{ padding: 0 }}>
             <h2 className="section-title">Sobre Mim</h2>
@@ -715,7 +601,7 @@ export default function PortfolioContent() {
       </section>
 
       {/* ══════════ SEÇÃO EXPERIÊNCIA PROFISSIONAL ══════════ */}
-      <section id="experiencia" className="experiencia-section fade-section">
+      <section id="experience" className="experiencia-section fade-section">
         <div className="section-padding">
           <div className="container" style={{ padding: 0 }}>
             <h2 className="section-title">Experiência Profissional</h2>
@@ -794,7 +680,7 @@ export default function PortfolioContent() {
       </section>
 
       {/* ══════════ SEÇÃO FORMAÇÃO ══════════ */}
-      <section id="formacao" className="formacao-section fade-section">
+      <section id="education" className="formacao-section fade-section">
         <div className="section-padding">
           <div className="container" style={{ padding: 0 }}>
             <h2 className="section-title">Formação</h2>
@@ -973,7 +859,7 @@ export default function PortfolioContent() {
 
       {/* ══════════ SEÇÃO COMPETÊNCIAS ══════════ */}
       <section
-        id="competencias"
+        id="competences"
         className="competencias-section fade-section"
         ref={compSectionRef}
       >
@@ -1067,7 +953,7 @@ export default function PortfolioContent() {
       </section>
 
       {/* ══════════ SEÇÃO CTA — PRECISA DE ORIENTAÇÃO? ══════════ */}
-      <section id="contato" className="contato-section fade-section">
+      <section id="contact" className="contato-section fade-section">
         <div className="section-padding">
           <div className="container" style={{ padding: 0 }}>
             <div className="contato-cta">
