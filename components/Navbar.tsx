@@ -94,10 +94,6 @@ export default function Navbar() {
             })}
           </div>
 
-          <a href="#contact" className="nav-cta" aria-label="Entrar em contato">
-            Entrar em Contato
-          </a>
-
           <button
             className={`hamburger ${mobileOpen ? 'open' : ''}`}
             onClick={() => setMobileOpen(!mobileOpen)}
