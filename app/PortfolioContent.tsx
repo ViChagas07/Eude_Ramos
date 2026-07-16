@@ -524,82 +524,6 @@ export default function PortfolioContent() {
         </div>
       </section>
 
-      {/* ══════════ SEÇÃO ÁREAS DE ATUAÇÃO ══════════ */}
-      <section id="areas" className="areas-section fade-section">
-        <div className="section-padding">
-          <div className="container" style={{ padding: 0 }}>
-            <h2 className="section-title">
-              Em quais situações posso ajudar você?
-            </h2>
-            <p className="section-sub">
-              Se você ou um familiar estão passando por alguma dessas situações,
-              posso orientar sobre os direitos, benefícios e encaminhamentos
-              adequados.
-            </p>
-
-            <div className="indication-grid">
-              {/* Card 1 — Dourado */}
-              <div
-                className="area-card"
-                style={{ '--accent-border': '#C5960C' } as React.CSSProperties}
-              >
-                <div className="area-card-icon" style={{ color: '#C5960C' }}>
-                  <IconHospital />
-                </div>
-                <div className="area-card-title">Internação hospitalar</div>
-                <p className="area-card-desc">
-                  Orientação sobre altas, transferências e direitos do paciente
-                </p>
-              </div>
-
-              {/* Card 2 — Laranja */}
-              <div
-                className="area-card"
-                style={{ '--accent-border': '#E67E22' } as React.CSSProperties}
-              >
-                <div className="area-card-icon" style={{ color: '#E67E22' }}>
-                  <IconDocument />
-                </div>
-                <div className="area-card-title">
-                  Benefícios previdenciários
-                </div>
-                <p className="area-card-desc">
-                  Auxílio-doença, DPVAT, BPC e outros direitos sociais
-                </p>
-              </div>
-
-              {/* Card 3 — Verde */}
-              <div
-                className="area-card"
-                style={{ '--accent-border': '#1A6E2E' } as React.CSSProperties}
-              >
-                <div className="area-card-icon" style={{ color: '#1A6E2E' }}>
-                  <IconHouse />
-                </div>
-                <div className="area-card-title">Vulnerabilidade social</div>
-                <p className="area-card-desc">
-                  Encaminhamento à rede de proteção e assistência social
-                </p>
-              </div>
-
-              {/* Card 4 — Azul */}
-              <div
-                className="area-card"
-                style={{ '--accent-border': '#2E86C1' } as React.CSSProperties}
-              >
-                <div className="area-card-icon" style={{ color: '#2E86C1' }}>
-                  <IconReport />
-                </div>
-                <div className="area-card-title">Pareceres e relatórios</div>
-                <p className="area-card-desc">
-                  Elaboração de documentação social para fins legais e médicos
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ══════════ SEÇÃO EXPERIÊNCIA PROFISSIONAL ══════════ */}
       <section id="experience" className="experiencia-section fade-section">
         <div className="section-padding">
@@ -674,6 +598,82 @@ export default function PortfolioContent() {
                   </li>
                 </ul>
               </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════ SEÇÃO ÁREAS DE ATUAÇÃO ══════════ */}
+      <section id="areas" className="areas-section fade-section">
+        <div className="section-padding">
+          <div className="container" style={{ padding: 0 }}>
+            <h2 className="section-title">
+              Em quais situações posso ajudar você?
+            </h2>
+            <p className="section-sub">
+              Se você ou um familiar estão passando por alguma dessas situações,
+              posso orientar sobre os direitos, benefícios e encaminhamentos
+              adequados.
+            </p>
+
+            <div className="indication-grid">
+              {/* Card 1 — Dourado */}
+              <div
+                className="area-card"
+                style={{ '--accent-border': '#C5960C' } as React.CSSProperties}
+              >
+                <div className="area-card-icon" style={{ color: '#C5960C' }}>
+                  <IconHospital />
+                </div>
+                <div className="area-card-title">Internação hospitalar</div>
+                <p className="area-card-desc">
+                  Orientação sobre altas, transferências e direitos do paciente
+                </p>
+              </div>
+
+              {/* Card 2 — Laranja */}
+              <div
+                className="area-card"
+                style={{ '--accent-border': '#E67E22' } as React.CSSProperties}
+              >
+                <div className="area-card-icon" style={{ color: '#E67E22' }}>
+                  <IconDocument />
+                </div>
+                <div className="area-card-title">
+                  Benefícios previdenciários
+                </div>
+                <p className="area-card-desc">
+                  Auxílio-doença, DPVAT, BPC e outros direitos sociais
+                </p>
+              </div>
+
+              {/* Card 3 — Verde */}
+              <div
+                className="area-card"
+                style={{ '--accent-border': '#1A6E2E' } as React.CSSProperties}
+              >
+                <div className="area-card-icon" style={{ color: '#1A6E2E' }}>
+                  <IconHouse />
+                </div>
+                <div className="area-card-title">Vulnerabilidade social</div>
+                <p className="area-card-desc">
+                  Encaminhamento à rede de proteção e assistência social
+                </p>
+              </div>
+
+              {/* Card 4 — Azul */}
+              <div
+                className="area-card"
+                style={{ '--accent-border': '#2E86C1' } as React.CSSProperties}
+              >
+                <div className="area-card-icon" style={{ color: '#2E86C1' }}>
+                  <IconReport />
+                </div>
+                <div className="area-card-title">Pareceres e relatórios</div>
+                <p className="area-card-desc">
+                  Elaboração de documentação social para fins legais e médicos
+                </p>
+              </div>
             </div>
           </div>
         </div>
