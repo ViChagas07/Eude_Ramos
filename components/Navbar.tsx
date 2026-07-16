@@ -86,7 +86,8 @@ export default function Navbar() {
                     transition: 'border-color 0.3s ease, color 0.3s ease',
                     color: isActive ? color : undefined,
                     fontWeight: isActive ? 700 : 500,
-                  }}
+                    '--hover-color': color,
+                  } as React.CSSProperties}
                 >
                   {label}
                 </a>

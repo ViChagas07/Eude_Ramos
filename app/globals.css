@@ -194,7 +194,7 @@ small,
 }
 
 .nav-links a:hover {
-  color: var(--green-primary);
+  color: var(--hover-color, var(--green-primary));
 }
 
 .nav-links a.active {
