@@ -141,9 +141,11 @@ small,
   z-index: 1000;
   background: var(--white);
   border-bottom: 1px solid var(--green-light);
-  height: 52px;
+  min-height: 52px;
+  height: auto;
   display: flex;
   align-items: center;
+  padding-top: env(safe-area-inset-top, 0px);
   transition: box-shadow 0.3s ease;
 }
 
@@ -283,10 +285,11 @@ small,
 .mobile-drawer {
   display: flex;
   position: fixed;
-  top: 52px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  padding-top: calc(52px + env(safe-area-inset-top, 0px));
   background: var(--white);
   z-index: 999;
   flex-direction: column;
@@ -319,7 +322,7 @@ small,
   display: grid;
   grid-template-columns: 1fr;
   min-height: auto;
-  margin-top: 52px;
+  margin-top: calc(52px + env(safe-area-inset-top, 0px));
   background: var(--green-bg);
   overflow: hidden;
 }
@@ -1220,7 +1223,8 @@ small,
   }
 
   .navbar {
-    height: 56px;
+    min-height: 56px;
+    height: auto;
   }
 
   .navbar .container {
@@ -1231,7 +1235,7 @@ small,
   .hero {
     grid-template-columns: 1fr 1fr;
     min-height: 520px;
-    margin-top: 56px;
+    margin-top: calc(56px + env(safe-area-inset-top, 0px));
   }
 
   .hero-left {
