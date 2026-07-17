@@ -865,7 +865,7 @@ export default function PortfolioContent() {
       >
         <div className="section-padding">
           <div className="container" style={{ padding: 0 }}>
-            <h2 className="section-title" style={{ color: '#EA580C' }}>Competências e Habilidades</h2>
+            <h2 className="section-title" style={{ color: '#2E86C1' }}>Competências e Habilidades</h2>
 
             <div className="comp-grid" style={{ marginTop: 20 }}>
               <div
