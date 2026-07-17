@@ -475,7 +475,7 @@ export default function PortfolioContent() {
       <section id="about" className="sobre-section fade-section">
         <div className="section-padding">
           <div className="container" style={{ padding: 0 }}>
-            <h2 className="section-title">Sobre Mim</h2>
+            <h2 className="section-title" style={{ color: '#16A34A' }}>Sobre Mim</h2>
             <div className="sobre-grid" style={{ marginTop: 20 }}>
               {/* Left: Professional Profile */}
               <div className="sobre-text">
@@ -528,7 +528,7 @@ export default function PortfolioContent() {
       <section id="experience" className="experiencia-section fade-section">
         <div className="section-padding">
           <div className="container" style={{ padding: 0 }}>
-            <h2 className="section-title">Experiência Profissional</h2>
+            <h2 className="section-title" style={{ color: '#CA8A04' }}>Experiência Profissional</h2>
             <p className="section-sub">
               Atuação em dois contextos distintos — saúde hospitalar e sistema
               sociojurídico — com foco em direitos e proteção social.
@@ -607,7 +607,7 @@ export default function PortfolioContent() {
       <section id="areas" className="areas-section fade-section">
         <div className="section-padding">
           <div className="container" style={{ padding: 0 }}>
-            <h2 className="section-title">
+            <h2 className="section-title" style={{ color: '#DC2626' }}>
               Em quais situações posso ajudar você?
             </h2>
             <p className="section-sub">
@@ -683,7 +683,7 @@ export default function PortfolioContent() {
       <section id="education" className="formacao-section fade-section">
         <div className="section-padding">
           <div className="container" style={{ padding: 0 }}>
-            <h2 className="section-title">Formação</h2>
+            <h2 className="section-title" style={{ color: '#EA580C' }}>Formação</h2>
 
             <div className="formacao-grid" style={{ marginTop: 20 }}>
               {/* Bloco 1: Formação Acadêmica + Complementar */}
@@ -865,7 +865,7 @@ export default function PortfolioContent() {
       >
         <div className="section-padding">
           <div className="container" style={{ padding: 0 }}>
-            <h2 className="section-title">Competências e Habilidades</h2>
+            <h2 className="section-title" style={{ color: '#EA580C' }}>Competências e Habilidades</h2>
 
             <div className="comp-grid" style={{ marginTop: 20 }}>
               <div
