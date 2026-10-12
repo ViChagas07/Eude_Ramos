@@ -160,8 +160,31 @@ export default function Navbar() {
         role="dialog"
         aria-label="Menu de navegação"
       >
-        {/* Theme toggle in mobile drawer */}
-        <div className="nav-theme-toggle" style={{ alignSelf: 'flex-end', marginBottom: '16px' }} role="group" aria-label="Alternar tema">
+        {/* Navigation links */}
+        <nav className="mobile-nav-links">
+          {NAV_LINKS.map(({ id, label, color }) => {
+            const isActive = activeId === id;
+            return (
+              <a
+                key={id}
+                href={`#${id}`}
+                onClick={(e) => { e.preventDefault(); scrollTo(id); }}
+                style={{
+                  borderLeft: isActive ? `3px solid ${color}` : '3px solid transparent',
+                  paddingLeft: isActive ? '12px' : '15px',
+                  color: isActive ? color : undefined,
+                  fontWeight: isActive ? 700 : 500,
+                  transition: 'border-color 0.3s ease, color 0.3s ease, padding-left 0.3s ease',
+                }}
+              >
+                {label}
+              </a>
+            );
+          })}
+        </nav>
+
+        {/* Theme toggle - centered, after Contato */}
+        <div className="mobile-theme-toggle" role="group" aria-label="Alternar tema">
           <button
             onClick={toggleTheme}
             aria-label={theme === 'light' ? 'Ativar modo escuro' : 'Ativar modo claro'}
@@ -171,25 +194,6 @@ export default function Navbar() {
             {theme === 'light' ? <MoonIcon /> : <SunIcon />}
           </button>
         </div>
-        {NAV_LINKS.map(({ id, label, color }) => {
-          const isActive = activeId === id;
-          return (
-            <a
-              key={id}
-              href={`#${id}`}
-              onClick={(e) => { e.preventDefault(); scrollTo(id); }}
-              style={{
-                borderLeft: isActive ? `3px solid ${color}` : '3px solid transparent',
-                paddingLeft: isActive ? '12px' : '15px',
-                color: isActive ? color : undefined,
-                fontWeight: isActive ? 700 : 500,
-                transition: 'border-color 0.3s ease, color 0.3s ease, padding-left 0.3s ease',
-              }}
-            >
-              {label}
-            </a>
-          );
-        })}
       </div>
     </>
   );
